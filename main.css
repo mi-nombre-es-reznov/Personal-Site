@@ -1,4 +1,55 @@
+html, body {
+    height: 100%; /* Ensure the body takes full height */
+    margin: 0; /* Remove default margin */
+}
+
 section {
-    background: linear-gradient(to right, transparent 50%, #fff 50%), url('https://images.pexels.com/photos/731082/pexels-photo-731082.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') no-repeat center;
-    background-size: cover;
+    height: calc(100vh - 56px); /* Full height of the viewport minus navbar height (56px is default height) */
+    width: 100vw; /* Full width of the viewport */
+    display: flex; /* Use flexbox for layout */
+    position: relative; /* Establishes a positioning context */
+}
+
+.left-side {
+    width: 33.33%; /* Left side takes 1/3 of the width */
+    background: url('../images/Test Image.jpg') no-repeat center;
+    background-size: cover; /* Image covers the area */
+    position: relative; /* For overlay positioning */
+}
+
+.right-side {
+    width: 66.67%; /* Right side takes 2/3 of the width */
+    background-color: #fff; /* White background for content */
+    position: relative; /* Allow positioning of navbar */
+}
+
+/* Overlay content on the left side */
+.overlay-content {
+    position: absolute; /* Absolute positioning */
+    bottom: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    color: white; /* Text color for visibility */
+    z-index: 5; /* Lower than navbar */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    section {
+        flex-direction: column; /* Stack elements vertically */
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .left-side, .right-side {
+        width: 100%; /* Full width for both sections */
+        height: 50vh; /* Optional: Set height to half of the viewport height */
+    }
+
+    .left-side {
+        background-size: contain; /* Adjust image scaling */
+    }
+
+    .overlay-content {
+        bottom: 10px; /* Adjust position on mobile */
+        left: 10px; /* Adjust position on mobile */
+    }
 }
