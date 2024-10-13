@@ -10,12 +10,36 @@
 </head>
 <body>
     <!-- Navbar (Always on Top) -->
-    <nav class="navbar navbar-dark bg-dark fixed-top"> <!-- Fixed to the top -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <!-- Add links here as needed -->
+            <!-- Left-side fancy main link -->
+            <a class="navbar-brand main-link" href="#">Nicholas Perez-Aguilar</a>
+    
+            <!-- Hamburger menu button (appears on smaller screens) -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Navbar links that will collapse into hamburger on smaller screens -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto d-flex flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link text-light px-3 py-2 link-box" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light px-3 py-2 link-box" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light px-3 py-2 link-box" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
+    
+    
+    
+    
 
     <!-- Main Content Section -->
     <section>
@@ -29,7 +53,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 p-5">
-                        <h1 style="padding-top: 10px;">Welcome to my Page!!!</h1>
+                        <h1 style="padding-top: 20px; text-align: center;">Welcome to my Page!!!</h1>
                         <p>This page is currently under construction. Please check back in at a later time for further updates. Thank you for visiting!</p>
                     </div>
                 </div>
