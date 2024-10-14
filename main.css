@@ -1,110 +1,80 @@
-html, body {
-    height: 100%; /* Ensure the body takes full height */
-    margin: 0; /* Remove default margin */
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
 }
 
-section {
-    height: calc(100vh - 56px); /* Full height of the viewport minus navbar height (56px is default height) */
-    width: 100vw; /* Full width of the viewport */
-    display: flex; /* Use flexbox for layout */
-    position: relative; /* Establishes a positioning context */
+/* Left-side image section */
+.sidebar {
+    background: url('../images/coffee side bar.jpeg') no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.left-side {
-    width: 33.33%; /* Left side takes 1/3 of the width */
-    background: url('../images/Test Image.jpg') no-repeat center;
-    background-size: cover; /* Image covers the area */
-    position: relative; /* For overlay positioning */
+/* Circular image at the top */
+.sidebar img.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
 
-.right-side {
-    width: 66.67%; /* Right side takes 2/3 of the width */
-    background-color: #fff; /* White background for content */
-    position: relative; /* Allow positioning of navbar */
-}
-
-/* Overlay content on the left side */
-.overlay-content {
-    position: absolute; /* Absolute positioning */
-    bottom: 20px; /* Adjust as needed */
-    left: 20px; /* Adjust as needed */
-    color: white; /* Text color for visibility */
-    z-index: 5; /* Lower than navbar */
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    section {
-        flex-direction: column; /* Stack elements vertically */
-        height: auto; /* Allow height to adjust based on content */
-    }
-
-    .left-side, .right-side {
-        width: 100%; /* Full width for both sections */
-        height: 50vh; /* Optional: Set height to half of the viewport height */
-    }
-
-    .left-side {
-        background-size: contain; /* Adjust image scaling */
-    }
-
-    .overlay-content {
-        bottom: 10px; /* Adjust position on mobile */
-        left: 10px; /* Adjust position on mobile */
-    }
-}
-
-/* Nav Link boxes*/
-.link-box {
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border around the links */
-    border-radius: 5px; /* Rounded corners */
-    margin-left: 10px; /* Space between the boxes */
-    transition: background-color 0.3s ease; /* Smooth transition effect */
-}
-
-.link-box:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
-}
-
-/* Style for the left-side main link */
-.main-link {
-    font-family: 'Cursive', sans-serif; /* Cursive font */
-    font-size: 1.75rem; /* Larger font size */
-    font-weight: bold; /* Makes it stand out more */
-    color: #f8f9fa; /* Light color to match the navbar */
-    letter-spacing: 1px; /* Adds some spacing between the letters */
-    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
-}
-
-/* Hover effect to make the left link stand out even more */
-.main-link:hover {
-    color: #ffc107; /* Fancy color change on hover */
-    transform: scale(1.1); /* Slight enlargement on hover */
-}
-
-/* Fancy Left-Side Link */
-.main-link {
-    font-family: 'Cursive', sans-serif;
-    font-size: 1.75rem;
-    font-weight: bold;
-    color: #f8f9fa;
-    letter-spacing: 1px;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.main-link:hover {
-    color: #ffc107;
-    transform: scale(1.1);
-}
-
-/* Boxed Links */
-.link-box {
-    border: 1px solid rgba(255, 255, 255, 0.3);
+/* Link styling */
+.sidebar a {
+    color: #222; /* Darker text color for links */
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    padding: 10px 20px;
     border-radius: 5px;
-    margin-left: 10px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s, color 0.3s;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.5); /* More transparent white background */
+    font-weight: bold; /* Make the font bold */
 }
 
-.link-box:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+/* Link hover and active states */
+.sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Same transparent effect on hover */
+    color: #000; /* Change text color to black on hover */
+}
+
+/* Active link styling */
+.sidebar a.active {
+    background-color: rgba(255, 0, 0, 0.5); /* Distinguishing active link with a different color */
+    color: #fff; /* Keep text color white for active link */
+}
+
+
+/* Right-side content area */
+main {
+    background-color: rgba(165, 105, 50, 0.3); /* Very light grey/white complementary background */
+    padding: 40px;
+    min-height: 100vh; /* Ensure main content takes up full height */
+}
+
+/* Main text styling */
+main h1 {
+    color: #333;
+    font-size: 2.5rem;
+}
+
+main p {
+    color: #555;
+    font-size: 1.2rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .sidebar a {
+        font-size: 1.2rem; /* Smaller font size for mobile */
+    }
 }
