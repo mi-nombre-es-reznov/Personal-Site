@@ -24,7 +24,7 @@ body, html {
     border-radius: 50%;
     border: 4px solid #fff;
     object-fit: cover; /* Cover the width of the circle */
-    object-position: center; /* Ensure the image stays centered */
+    object-position: center top; /* Ensure the image stays centered */
     margin-bottom: 20px;
 }
 
