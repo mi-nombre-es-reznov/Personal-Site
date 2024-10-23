@@ -3,3 +3,11 @@ Known Issues:
 being exactly identical.
 
 Possible Solution: Find the matching color of the opacity valued color and use that for both with 100% opacity, or no reduction in transparency.
+
+
+
+
+
+
+Possible Improvements:
+- make the image crest background transparent.
