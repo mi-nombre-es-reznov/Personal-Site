@@ -4,6 +4,7 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
+    background-color: rgba(165, 105, 50, 0.3);
 }
 
 /* Content Headers and Paragraphs */
@@ -67,7 +68,7 @@ body, html {
 
 /* Right-side content area */
 main {
-    background-color: rgba(165, 105, 50, 0.3); /* Very light grey/white complementary background */
+    background-color: rgba(165, 105, 50, 0.3); /* Light Coffee background color */
     padding: 40px;
     min-height: 100vh; /* Ensure main content takes up full height */
 }
@@ -88,4 +89,29 @@ main p {
     .sidebar a {
         font-size: 1.2rem; /* Smaller font size for mobile */
     }
+}
+
+/* Table-like structure */
+.image-table {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+/* Left and right halves (cells) */
+.image-cell {
+    width: 50%; /* Each cell takes up half the width */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center;     /* Center the image vertically */
+    padding: 10px;
+}
+
+/* Ensure images scale responsively */
+.image-cell img {
+    max-width: 100%; /* Make images responsive */
+    height: auto;    /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the cell area, while respecting the aspect ratio */
 }
