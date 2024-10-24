@@ -7,7 +7,9 @@ being exactly identical.
 
 Solved (24 Oct 2024): Did not mess with color anymore. Changed all backgrounds to black with no opacity. Changed colors of content through CSS for [multiple page] site update.
 
-
+[ ] Problem 2:
+- The Main Header formatting is not appearing on mobile. It does appear okay on the computer browser.
+        Notes: Maybe it is Safari that is the issue? Look into this. Also, test on Google Chrome to see if anything changes.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
