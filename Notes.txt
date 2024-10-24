@@ -1,13 +1,21 @@
 Known Issues:
+-------------
+[X] Problem 1:
 - The opacities are overlapping in the CSS file between the main and the body tags. Because of this, there is an overlapping section that is a different color, despite both values
 being exactly identical.
+          Possible Solution: Find the matching color of the opacity valued color and use that for both with 100% opacity, or no reduction in transparency.
 
-Possible Solution: Find the matching color of the opacity valued color and use that for both with 100% opacity, or no reduction in transparency.
+Solved (24 Oct 2024): Did not mess with color anymore. Changed all backgrounds to black with no opacity. Changed colors of content through CSS for [multiple page] site update.
 
 
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
 Possible Improvements:
+----------------------
+[X] Possibility 1:
 - make the image crest background transparent.
+
+This has been accomplished with Photoshop. A second image (no background) has been created in addition to the original image, in the event that the original image is needed.
