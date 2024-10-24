@@ -4,16 +4,23 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
-    background-color: rgba(165, 105, 50, 0.3);
+    background-color: black;
+}
+
+hr {
+    background-color: wheat;
 }
 
 /* Content Headers and Paragraphs */
 .headers {
-    color: whitesmoke; /* Change the color of the headings to white */
+    color: lightblue; /* Change the color of the headings to white */
+    padding-left: 10px;
 }
 
 .h-content {
-    color: blue;
+    color: white;
+    padding-left: 25px;
+    padding-top: 5px;
 }
 
 /* Left-side image section */
@@ -68,7 +75,7 @@ body, html {
 
 /* Right-side content area */
 main {
-    background-color: rgba(165, 105, 50, 0.3); /* Light Coffee background color */
+    background-color: black;  /* Light Coffee background color */
     padding: 40px;
     min-height: 100vh; /* Ensure main content takes up full height */
 }
