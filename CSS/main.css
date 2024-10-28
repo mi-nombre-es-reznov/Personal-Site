@@ -54,6 +54,11 @@ hr {
     text-align: right;
 }
 
+/* Use this to center text -- Typically for unfinished things*/
+.centered {
+    text-align: center;
+}
+
 /* Left-side image section */
 .sidebar {
     background: url('../images/coffee side bar.jpeg') no-repeat center;
