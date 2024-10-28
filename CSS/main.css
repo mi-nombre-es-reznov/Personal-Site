@@ -31,6 +31,29 @@ hr {
     font-size: 500%;
 }
 
+/* CSS for Resume Page */
+.ResumeFormatter {
+    color: lightblue; /* Change the color of the headings to white */
+    text-align: center;
+}
+
+#ResumeLine {
+    background-color: lightblue; /* Change the color of the headings to white */
+}
+
+.ResTable {
+    width: 100%; /* Makes the table span across the screen */
+    color: lightblue;
+}
+
+#table-list {
+    color: white;
+}
+
+#table-right {
+    text-align: right;
+}
+
 /* Left-side image section */
 .sidebar {
     background: url('../images/coffee side bar.jpeg') no-repeat center;
