@@ -164,3 +164,33 @@ main p {
     height: auto;    /* Maintain aspect ratio */
     object-fit: cover; /* Cover the cell area, while respecting the aspect ratio */
 }
+
+/* Container for the icons */
+.social-icons {
+    display: flex;
+    justify-content: space-evenly; /* Evenly distribute icons */
+    flex-wrap: wrap; /* Wrap icons on smaller screens */
+    align-items: center;
+    gap: 20px; /* Space between icons */
+    padding: 10px; /* Padding for spacing within container */
+    max-width: 80%; /* Adjusts to half of screen width */
+    margin: auto; /* Centers within the right half */
+  }
+  
+  /* Styling for each icon */
+  .social-icon img {
+    width: 50px; /* Set consistent size */
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 50%; /* Circular shape */
+    background-color: #f0f0f0;
+    padding: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hover effect */
+  .social-icon img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+  
