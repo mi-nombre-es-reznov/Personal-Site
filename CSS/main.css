@@ -46,6 +46,10 @@ hr {
     color: lightblue;
 }
 
+#space-table {
+    margin-bottom: 10px;
+}
+
 .table-list {
     color: white;
 }
