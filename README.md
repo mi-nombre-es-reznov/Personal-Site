@@ -1,4 +1,6 @@
-# Welcome to My Personal Website
+<h1 align="center">
+  Welcome to My Personal Website
+</h1>
 
 Hello, and welcome to my online portfolio! This website is designed to give you a more comprehensive idea of who I am and what I do. While a resume is limited to one page, this site allows me to share more of my journey, examples of my work, and the values that define my professional persona. 
 
