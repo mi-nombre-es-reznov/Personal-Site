@@ -173,7 +173,6 @@ main {
         position: relative;   /* no longer fixed */
         width: 100%;          /* full width */
         height: auto;         /* adjust to content */
-        margin-bottom: 20px;  /* spacing below sidebar */
         overflow: visible;    /* let content expand naturally */
     }
     main {
