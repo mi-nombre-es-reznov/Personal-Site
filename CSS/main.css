@@ -2,7 +2,6 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
     font-family: Arial, sans-serif;
     background-color: black;
 }
@@ -98,61 +97,99 @@ hr {
 }
 
 /* Left-side image section */
+/* Fixed Sidebar */
 .sidebar {
-    background: url('../images/coffee side bar.jpeg') no-repeat center;
-    background-size: cover;
-    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;           /* full viewport height */
+    width: 25%;              /* default large screen */
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: url('../images/coffee side bar.jpeg') no-repeat center;
+    background-size: cover;
+    overflow-y: auto;        /* scroll inside if content exceeds viewport */
+    z-index: 1000;
 }
 
-/* Circular image at the top */
+/* Profile Image */
 .sidebar img.profile-pic {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     border: 4px solid #fff;
-    object-fit: cover; /* Cover the width of the circle */
-    object-position: center top; /* Ensure the image stays centered */
+    object-fit: cover;
+    object-position: center top;
     margin-bottom: 20px;
 }
 
-
-/* Link styling */
+/* Sidebar Links */
 .sidebar a {
-    color: #222; /* Darker text color for links */
+    color: #222;
     text-decoration: none;
     font-size: 1.5rem;
     margin: 10px 0;
     padding: 10px 20px;
     border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
     display: block;
-    background-color: rgba(255, 255, 255, 0.5); /* More transparent white background */
-    font-weight: bold; /* Make the font bold */
+    background-color: rgba(255, 255, 255, 0.5);
+    font-weight: bold;
 }
 
-/* Link hover and active states */
 .sidebar a:hover {
-    background-color: rgba(255, 255, 255, 0.5); /* Same transparent effect on hover */
-    color: #000; /* Change text color to black on hover */
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Active link styling */
 .sidebar a.active {
-    background-color: rgba(255, 0, 0, 0.5); /* Distinguishing active link with a different color */
-    color: #fff; /* Keep text color white for active link */
+    background-color: rgba(255,0,0,0.5);
+    color: #fff;
 }
 
-
-/* Right-side content area */
+/* Main content shifted to avoid overlap */
 main {
-    background-color: black;  /* Light Coffee background color */
+    margin-left: 25%;      /* large screens */
     padding: 40px;
-    min-height: 100vh; /* Ensure main content takes up full height */
+    min-height: 100vh;
+    background-color: black;
+    color: white;
 }
+
+/* Medium screens: sidebar ~33% width */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .sidebar {
+        width: 33.333%;
+    }
+    main {
+        margin-left: 33.333%;
+    }
+}
+
+/* Small screens: stacked layout */
+@media (max-width: 767.98px) {
+    .sidebar {
+        position: relative;   /* no longer fixed */
+        width: 100%;          /* full width */
+        height: auto;         /* adjust to content */
+        margin-bottom: 20px;  /* spacing below sidebar */
+        overflow: visible;    /* let content expand naturally */
+    }
+    main {
+        margin-left: 0;       /* remove left margin */
+        padding: 20px;
+    }
+}
+
+/* Sidebar links smaller on small screens */
+@media (max-width: 768px) {
+    .sidebar a {
+        font-size: 1.2rem;
+    }
+}
+
+
 
 /* Main text styling */
 main h1 {
@@ -226,3 +263,5 @@ main p {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
   }
   
+
+
