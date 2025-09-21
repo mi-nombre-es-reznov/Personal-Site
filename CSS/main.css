@@ -243,17 +243,17 @@ main p {
 
 /* Ensure images scale responsively */
 .image-cell img {
-    max-width: 100%; /* Make images responsive */
-    height: auto;    /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the cell area, while respecting the aspect ratio */
+    max-width: 100%;    /* Make images responsive */
+    height: auto;       /* Maintain aspect ratio */
+    object-fit: cover;  /* Cover the cell area, while respecting the aspect ratio */
 }
 
 /* Container for the icons */
 .social-icons {
     display: flex;
-    justify-content: flex-start; /* align left */
+    justify-content: flex-start;    /* align left */
     align-items: center;
-    gap: 10px; /* spacing between icons */
+    gap: 10px;                      /* spacing between icons */
     padding: 10px;
 }
 
@@ -261,7 +261,7 @@ main p {
     display: inline-block;          /* keeps the link size tight around image */
     width: auto;                    /* prevent link from expanding */
     height: auto;                   /* prevent link from expanding */
-    background: none;           /* no background */
+    background: none;               /* no background */
     padding: 0;
     margin: 0;
     border: none;
