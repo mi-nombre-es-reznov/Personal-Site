@@ -3,7 +3,24 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: black;
+
+}
+
+body {
+    position: relative;
+    background: url('../images/Site_BG.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+/* Overlay for darkening */
+body::before {
+    content: "";
+    position: fixed;       /* fixed ensures it covers viewport even if content scrolls */
+    inset: 0;              /* shorthand for top:0; right:0; bottom:0; left:0 */
+    background: rgba(0, 0, 0, 0.5); /* dark overlay opacity */
+    pointer-events: none;  /* content can still be clicked */
+    z-index: 0;            /* sits behind content */
 }
 
 hr {
@@ -152,8 +169,6 @@ hr {
 main {
     margin-left: 25%;      /* large screens */
     padding: 40px;
-    min-height: 100vh;
-    background-color: black;
     color: white;
 }
 
