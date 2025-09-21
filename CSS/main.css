@@ -251,31 +251,39 @@ main p {
 /* Container for the icons */
 .social-icons {
     display: flex;
-    justify-content: space-evenly; /* Evenly distribute icons */
-    flex-wrap: wrap; /* Wrap icons on smaller screens */
+    justify-content: flex-start; /* align left */
     align-items: center;
-    gap: 20px; /* Space between icons */
-    padding: 10px; /* Padding for spacing within container */
-    max-width: 80%; /* Adjusts to half of screen width */
-    margin: auto; /* Centers within the right half */
-  }
-  
-  /* Styling for each icon */
-  .social-icon img {
-    width: 50px; /* Set consistent size */
-    height: auto;
+    gap: 10px; /* spacing between icons */
+    padding: 10px;
+}
+
+.social-icons a {
+    display: inline-block;          /* keeps the link size tight around image */
+    width: auto;                    /* prevent link from expanding */
+    height: auto;                   /* prevent link from expanding */
+    background: none;           /* no background */
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.social-icons a img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    background-color: rgba(255, 255, 255, .3); /* Inner BG */
+    border-radius: 50%;
+    /* Apply shadow always */
+    box-shadow: 0 4px 12px rgba(184, 83, 83, 0.2); /* stronger and more visible */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 50%; /* Circular shape */
-    background-color: #f0f0f0;
-    padding: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Hover effect */
-  .social-icon img:hover {
+}
+
+/* Hover effect */
+.social-icons a img:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-
-
+    box-shadow: 0 6px 14px rgba(235, 0, 0, 0.6); /* stronger shadow on hover */
+}
