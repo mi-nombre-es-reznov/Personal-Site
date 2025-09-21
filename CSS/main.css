@@ -238,7 +238,7 @@ main p {
     display: flex;
     justify-content: center; /* Center the image horizontally */
     align-items: center;     /* Center the image vertically */
-    padding: 10px;
+    padding: 10%;
 }
 
 /* Ensure images scale responsively */
